@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #00bcd4; /* Um azul/ciano que remete a saúde */
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Estilo para a Galeria/Carrossel de Mockups */
+.mockup-gallery {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    overflow: hidden; /* Importante para esconder os itens inativos */
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.mockup-item {
+    display: none; /* Esconde todos por padrão */
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+.mockup-item.active {
+    display: block; /* Mostra apenas o item ativo */
+}
+
+.mockup-item img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+}
+
+/* Posicionamento da Logo SOBRE a Imagem do Mockup */
+.logo-overlay {
+    position: absolute;
+    /* Ajuste as coordenadas (top, left, width, height) para posicionar sua logo 
+       exatamente onde ela deve ficar em cima da imagem do mockup. 
+       Estes são valores de exemplo e PRECISAM SER AJUSTADOS para cada imagem (jaleco, caneca, etc.) */
+    
+    top: 15%; /* Exemplo: 15% do topo da div .mockup-item */
+    left: 50%; /* Exemplo: 50% da esquerda da div .mockup-item */
+    transform: translate(-50%, -50%); /* Centraliza o elemento */
+    
+    /* Defina o tamanho da logo de forma que ela se encaixe no mockup */
+    width: 150px; 
+    height: 50px;
+
+    /* Para visualizar a área da logo, remova as linhas abaixo no projeto final */
+    background-color: rgba(255, 0, 0, 0.3); 
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* No projeto final, você colocará a imagem da sua logo aqui no lugar do texto! */
+    background-image: url('images/sua_logo_final.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Estilos de Navegação */
+.navigation {
+    margin-top: 20px;
+}
+
+.navigation button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.navigation button:hover {
+    background-color: #0097a7;
+}
